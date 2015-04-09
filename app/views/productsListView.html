@@ -1,0 +1,8 @@
+<h1>Products List View</h1>
+<button ng-click="vm.loadProducts()">Load</button>
+
+<div ng-repeat="product in vm.productsList">
+  <span>{{product.id}}</span>
+  <span>{{product.name}}</span>
+  <span>${{product.price}}</span>
+</div>
