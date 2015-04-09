@@ -4,6 +4,7 @@
 /// <reference path="defs/jasmine.d.ts" />
 /// <reference path="mock/builders/ProductBuilder.ts" />
 /// <reference path="mock/builders/ProductListBuilder.ts" />
+/// <reference path="mock/interceptors/BaseInterceptor.ts" />
 /// <reference path="mock/interceptors/ProductsInterceptor.ts" />
 /// <reference path="mock/server-api.ts" />
 /// <reference path="spec/controllers/ProductsListController.test.ts" />
