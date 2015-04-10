@@ -1,3 +1,7 @@
+import ProductsInterceptor from '../../mock/interceptors/ProductsInterceptor';
+import ProductsListController from '../../../app/scripts/controllers/ProductsListController';
+import {aDemoProductsList} from '../../mock/builders/ProductListBuilder';
+
 describe('Controller: ProductsListController', function () {
 
   var scope;

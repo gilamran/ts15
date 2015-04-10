@@ -1,4 +1,4 @@
-class BaseInterceptor {
+export default class BaseInterceptor {
 
   constructor(public $httpBackend:ng.IHttpBackendService) {
   }

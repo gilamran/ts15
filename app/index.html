@@ -15,39 +15,27 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-app="ts15App">
+  <body>
     <div class="container">
       <div ng-include="'views/productsListView.html'" ng-controller="productsListController as vm"></div>
     </div>
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/es6-module-loader/dist/es6-module-loader.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/ProductsListController.js"></script>
-    <script src="scripts/services/ProductsListService.js"></script>
-    <!-- endbuild -->
-
-    <!-- #if( false ) -->
-      <!-- build:js({app,.tmp,test}) scripts/mocks.js -->
-        <!-- Builders -->
-        <script src="test/test/mock/builders/ProductBuilder.js"></script>
-        <!-- Interceptor -->
-        <script src="test/test/mock/interceptors/ProductsInterceptor.js"></script>
-        <script src="test/test/mock/server-api.js"></script>
-      <!-- endbuild -->
-
-      <script src="bower_components/angular-mocks/angular-mocks.js"></script>
-      <script>
-        angular.module('ts15App').requires.push('ts15AppMocks');
-      </script>
-    <!-- #end -->
-
+    <script src="../node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="../node_modules/systemjs/dist/system.js"></script>
+    <script src="system.config.js"></script>
+    <script>
+    </script>
+    <script>
+      System.import('scripts/app').then(function() {
+        System.import('test/test/mock/server-api').then(function() {
+          angular.module('ts15App').requires.push('ts15AppMocks');
+          angular.bootstrap(document, ['ts15App']);
+        });
+      });
+    </script>
   </body>
 </html>

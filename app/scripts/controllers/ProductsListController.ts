@@ -1,4 +1,6 @@
-class ProductsListController {
+import ProductsListService from '../services/ProductsListService';
+
+export default class ProductsListController {
   public productsList : IProduct[];
 
   constructor(private productsListService:ProductsListService) {
@@ -9,5 +11,3 @@ class ProductsListController {
     this.productsListService.loadProducts();
   }
 }
-
-angular.module('ts15App').controller('productsListController', ProductsListController);

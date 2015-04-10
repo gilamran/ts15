@@ -1,3 +1,6 @@
+import ProductsInterceptor from './interceptors/ProductsInterceptor';
+import {aDemoProductsList} from './builders/ProductListBuilder';
+
 angular.module('ts15AppMocks', ['ngMockE2E', 'ts15App'])
 	.run(['$httpBackend', function ($httpBackend) {
 		$httpBackend.whenGET(/.*\.html$/).passThrough();

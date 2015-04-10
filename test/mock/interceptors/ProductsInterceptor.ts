@@ -1,6 +1,7 @@
 /// <reference path='../../tests_references.ts'/>
+import BaseInterceptor from './BaseInterceptor';
 
-class ProductsInterceptor extends BaseInterceptor{
+export default class ProductsInterceptor extends BaseInterceptor{
 
   constructor($httpBackend:ng.IHttpBackendService) {
     super($httpBackend);

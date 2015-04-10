@@ -1,4 +1,4 @@
-class ProductsListService {
+export default class ProductsListService {
   public productsList : IProduct[];
 
   constructor(private $http:ng.IHttpService) {
@@ -14,5 +14,3 @@ class ProductsListService {
     });
   }
 }
-
-angular.module('ts15App').service('productsListService', ProductsListService);

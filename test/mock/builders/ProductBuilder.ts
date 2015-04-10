@@ -1,4 +1,4 @@
-class ProductBuilder implements IProduct {
+export default class ProductBuilder implements IProduct {
   public id : string;
   public name : string;
   public price : number;

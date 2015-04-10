@@ -1,3 +1,8 @@
+import ProductsInterceptor from '../../mock/interceptors/ProductsInterceptor';
+import ProductsListService from '../../../app/scripts/services/ProductsListService';
+import {aDemoProductsList} from '../../mock/builders/ProductListBuilder';
+import {anEmptyProductsList} from '../../mock/builders/ProductListBuilder';
+
 describe('Service: ProductsListService', function () {
 
   var productsInterceptor : ProductsInterceptor;
